@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { BiMenuAltRight } from "react-icons/bi"
 import { GoX } from "react-icons/go"
+import { Link } from 'react-router'
 
 const HomePage = () => {
   const [openMenu, setOpenMenu] = React.useState(false)
@@ -136,10 +137,16 @@ const HomePage = () => {
           ${openMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col items-center justify-center h-full font-semibold gap-2 mt-13">
-          <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>PROJECTS</h1></div>
-          <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>AGENCE</h1></div>
-          <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>CONTACT</h1></div>
-          <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>BLOGUE</h1></div>
+          
+          <Link to="/projects" className='className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"' >
+          <h1>PROJECTS</h1>
+          </Link>
+          <Link to="/agence" className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div">
+          <h1>AGENCE</h1></Link>
+          <Link to="/contact" className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div">
+          <h1>CONTACT</h1></Link>
+          <Link to="/blogue" className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div">
+          <h1>BLOGUE</h1></Link>
         </div>
       </div>
 
