@@ -58,6 +58,15 @@ const HomePage = () => {
           each: 0.5
         }
       })
+      tl.to(".top-div", {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          stagger: {
+            each: 0.5
+          }
+      })
     }
   }, [openMenu])
 
@@ -114,7 +123,7 @@ const HomePage = () => {
           onClick={() => setOpenMenu(!openMenu)}
         >
           {openMenu ? (
-            <GoX size={150} color="white" className='m-0 p-0 border-2 border-white cross-icon'/>
+            <GoX size={110} color="white" className='m-0 p-0 border-2 border-white cross-icon'/>
           ) : (
             <BiMenuAltRight size={35} color="white" />
           )}
@@ -126,7 +135,7 @@ const HomePage = () => {
         className={`fixed top-0 right-0 h-full w-full bg-black text-white transform transition-transform duration-500 ease-in-out z-40 
           ${openMenu ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex flex-col items-center justify-center h-full font-semibold gap-5">
+        <div className="flex flex-col items-center justify-center h-full font-semibold gap-2 mt-13">
           <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>PROJECTS</h1></div>
           <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>AGENCE</h1></div>
           <div className="hover:text-gray-400 transition duration-200 cursor-pointer text-[5rem] border-2 border-white w-full text-center top-div"><h1>CONTACT</h1></div>
